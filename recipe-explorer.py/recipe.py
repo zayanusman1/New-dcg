@@ -1,0 +1,27 @@
+pasta = ("pasta Arrabiata", "italien", 20, "Medium")
+biryani = ("chicken biryani", "indian", 45, "Hard")
+print("recipe 1:", pasta)
+print("Name:",pasta[0])
+print("Cuisine:",pasta[1])
+print("Difficulty:",pasta[3])
+all_recipes = [pasta, biryani]
+print("\nFirst recipe:", all_recipes[0][0])
+print("Second recipe time:", all_recipes[1][2], "mins")
+print("Pasta details {sliced}:", pasta[1:3])
+print("\nPasta Recipe Details:")
+for detail in pasta:
+    print("- ", detail)
+pasta_ingredients = {"pasta", "tomato sauce", "garlic", "chili flakes"}
+biryani_ingredients = {"chicken", "rice", "spices", "yogurt"}
+print("Total Pasta Ingredients:", len(pasta_ingredients))
+pasta_ingredients.add("olive oil")
+pasta_ingredients.remove("garlic")
+print("\nUpdated Pasta Ingredients:", pasta_ingredients)
+all_ingredients = pasta_ingredients.union(biryani_ingredients)
+common = pasta_ingredients.intersection(biryani_ingredients)
+only_pasta = pasta_ingredients.difference(biryani_ingredients)
+unique_to_each = pasta_ingredients.symmetric_difference(biryani_ingredients)
+print("\nAll Ingredients:", all_ingredients)
+print("Common Ingredients {intersection}:", common)
+print("Ingredients only in Pasta {difference}:", only_pasta)
+print("Ingredients unique to each recipe {symmetric_difference}:", unique_to_each)
